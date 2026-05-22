@@ -64,7 +64,7 @@ export function Footer() {
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
             backgroundClip: "text",
-            opacity: 0.2,
+            opacity: 0.5,
           }}
         >
           menyu
