@@ -15,18 +15,18 @@ import { fileURLToPath } from 'url'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT = path.resolve(__dirname, '..')
 
-// "Screenshot" story variant — app rendered inside a padded wrapper
-// on a light background, giving the zoomed-out floating feel.
-const LADLE_URL = 'http://localhost:61001/?story=dashboard-menu--screenshot&mode=preview'
+// Default story at a wide viewport — the extra width naturally makes
+// the UI feel zoomed out without any artificial wrapper.
+const LADLE_URL = 'http://localhost:61001/?story=dashboard-menu--default&mode=preview'
 const OUT_PNG   = path.join(ROOT, 'scripts', '_hero_raw.png')
 const OUT_WEBP  = path.join(ROOT, 'public', 'hero.webp')
 
-// Wide viewport so the padded app looks naturally zoomed out.
-const VIEWPORT_WIDTH  = 1920
-const VIEWPORT_HEIGHT = 1080
-const DPR = 4  // device pixel ratio — 4x = ultra-sharp
+// Narrower viewport so dashboard elements fill the frame at readable size.
+const VIEWPORT_WIDTH  = 1440
+const VIEWPORT_HEIGHT = 810
+const DPR = 2  // 2x = retina sharp without over-shrinking UI elements
 
-console.log(`📸  Capturing DashboardMenu story at ${DPR}x DPR…`)
+console.log(`📸  Capturing DashboardMenu story at ${VIEWPORT_WIDTH}×${VIEWPORT_HEIGHT} ${DPR}x DPR…`)
 
 const browser = await chromium.launch()
 const page = await browser.newPage({

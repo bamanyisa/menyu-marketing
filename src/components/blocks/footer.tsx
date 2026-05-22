@@ -6,6 +6,7 @@ export function Footer() {
   const navigation = [
     { name: "Features", href: "/#features" },
     { name: "Pricing", href: "/pricing" },
+    { name: "FAQ", href: "/faq" },
     { name: "Contact", href: "/contact" },
   ];
 
@@ -59,12 +60,12 @@ export function Footer() {
         <p
           className="w-full text-center font-bold leading-none tracking-tighter"
           style={{
-            fontSize: "clamp(4rem, 18vw, 18rem)",
-            background: "linear-gradient(to bottom, currentColor 0%, transparent 100%)",
+            fontSize: "clamp(6rem, 32vw, 32rem)",
+            background: "linear-gradient(to bottom, currentColor 0%, transparent 60%)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
             backgroundClip: "text",
-            opacity: 0.5,
+            opacity: 0.35,
           }}
         >
           menyu

@@ -1,22 +1,21 @@
-import React from "react";
+import type { Metadata } from "next";
 
 import { Background } from "@/components/background";
 import { FAQ } from "@/components/blocks/faq";
-import { Testimonials } from "@/components/blocks/testimonials";
-import { DashedLine } from "@/components/dashed-line";
 
-const Page = () => {
+export const metadata: Metadata = {
+  title: "FAQ — Menyu",
+  description: "Answers to common questions about Menyu.",
+};
+
+export default function FAQPage() {
   return (
-    <Background>
+    <Background variant="bottom">
       <FAQ
-        className="py-28 text-center lg:pt-44 lg:pb-32"
+        className="py-28 lg:pt-44 lg:pb-32"
         className2="max-w-xl lg:grid-cols-1"
         headerTag="h1"
       />
-      <DashedLine className="mx-auto max-w-xl" />
-      <Testimonials dashedLineClassName="hidden" />
     </Background>
   );
-};
-
-export default Page;
+}

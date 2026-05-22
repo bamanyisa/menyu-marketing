@@ -6,15 +6,16 @@ import { cn } from "@/lib/utils";
 
 const topItems = [
   {
-    title: "Reusable issue templates.",
+    title: "A beautiful menu page your customers will love.",
     description:
-      "Draft lightning-fast documents with our Smart Instructions and Templates.",
+      "Every restaurant gets a mobile-friendly menu page with their brand colours, logo, and social links.",
     images: [
       {
-        src: "/resource-allocation/templates.webp",
-        alt: "Issue template interface",
-        width: 495,
-        height: 186,
+        src: "/resource-allocation/menu.webp",
+        alt: "Public menu page showing restaurant header and menu items",
+        width: 1080,
+        height: 870,
+        imageClassName: "max-h-64 w-auto",
       },
     ],
     className:
@@ -22,37 +23,17 @@ const topItems = [
     fade: [""],
   },
   {
-    title: "Simplify your stack.",
-    description: "No more Confluence, SharePoint, or Microsoft Word.",
+    title: "Share everywhere your customers are.",
+    description: "Link your Instagram, TikTok, WhatsApp and more — right on your menu page.",
     images: [
-      { src: "/logos/jira.svg", alt: "Jira logo", width: 48, height: 48 },
-      { src: "/logos/excel.svg", alt: "Excel logo", width: 48, height: 48 },
-      {
-        src: "/logos/notion.svg",
-        alt: "Notion logo",
-        width: 48,
-        height: 48,
-      },
-      { src: "/logos/word.svg", alt: "Word logo", width: 48, height: 48 },
-      {
-        src: "/logos/monday.svg",
-        alt: "Monday logo",
-        width: 48,
-        height: 48,
-      },
-      {
-        src: "/logos/drive.svg",
-        alt: "Google Drive logo",
-        width: 48,
-        height: 48,
-      },
-      {
-        src: "/logos/jira.svg",
-        alt: "Jira logo",
-        width: 48,
-        height: 48,
-      },
-      { src: "/logos/asana.svg", alt: "Asana logo", width: 48, height: 48 },
+      { src: "/logos/instagram-icon.svg", alt: "Instagram", width: 48, height: 48 },
+      { src: "/logos/tiktok-icon.svg", alt: "TikTok", width: 48, height: 48 },
+      { src: "/logos/whatsapp-icon.svg", alt: "WhatsApp", width: 48, height: 48 },
+      { src: "/logos/facebook-icon.svg", alt: "Facebook", width: 48, height: 48 },
+      { src: "/logos/youtube-icon.svg", alt: "YouTube", width: 48, height: 48 },
+      { src: "/logos/google-maps-color.svg", alt: "Google Maps", width: 48, height: 48 },
+      { src: "/logos/instagram-icon.svg", alt: "Instagram", width: 48, height: 48 },
+      { src: "/logos/tiktok-icon.svg", alt: "TikTok", width: 48, height: 48 },
     ],
     className:
       "flex-1 [&>.title-container]:mb-5 md:[&>.title-container]:mb-8 md:[&>.title-container]:translate-x-2 xl:[&>.title-container]:translate-x-4 [&>.title-container]:translate-x-0",
@@ -62,15 +43,16 @@ const topItems = [
 
 const bottomItems = [
   {
-    title: "Graveyard it.",
+    title: "QR code, ready to print.",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do.",
+      "Every menu comes with a scannable QR code. Print it, frame it, stick it — customers scan and see your menu instantly.",
     images: [
       {
-        src: "/resource-allocation/graveyard.webp",
-        alt: "Graveyard interface",
+        src: "/resource-allocation/qr.webp",
+        alt: "QR code card with Scan & Share CTA",
         width: 305,
         height: 280,
+        imageClassName: "max-h-64 w-auto",
       },
     ],
     className:
@@ -78,31 +60,33 @@ const bottomItems = [
     fade: ["bottom"],
   },
   {
-    title: "Task discussions.",
+    title: "Beautiful item cards, automatically.",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.",
+      "Food photos, descriptions, and prices — all laid out for you.",
     images: [
       {
-        src: "/resource-allocation/discussions.webp",
-        alt: "Task discussions interface",
-        width: 320,
-        height: 103,
+        src: "/resource-allocation/menu-card.webp",
+        alt: "Menu category card showing food items with photos and prices",
+        width: 1080,
+        height: 825,
+        imageClassName: "max-h-64 w-auto",
       },
     ],
     className:
-      "justify-normal [&>.title-container]:mb-5 md:[&>.title-container]:mb-0 [&>.image-container]:flex-1 md:[&>.image-container]:place-items-center md:[&>.image-container]:-translate-y-3",
-    fade: [""],
+      "[&>.title-container]:mb-5 md:[&>.title-container]:mb-8 xl:[&>.image-container]:translate-x-6 [&>.image-container]:translate-x-2",
+    fade: ["bottom"],
   },
   {
-    title: "Notifications.",
+    title: "Up and running in minutes.",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.",
+      "Set up your business profile, add your details, and go live — no technical knowledge needed.",
     images: [
       {
-        src: "/resource-allocation/notifications.webp",
-        alt: "Notifications interface",
-        width: 305,
-        height: 280,
+        src: "/resource-allocation/onboarding.webp",
+        alt: "Onboarding form — set up your business",
+        width: 1056,
+        height: 1108,
+        imageClassName: "max-h-96 w-auto",
       },
     ],
     className:
@@ -119,7 +103,7 @@ export const ResourceAllocation = () => {
     >
       <div className="">
         <h2 className="container text-center text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-6xl">
-          Mainline your resource allocation and execution
+          Everything you need to run your menu
         </h2>
 
         <div className="mt-8 md:mt-12 lg:mt-20">
@@ -146,7 +130,7 @@ export const ResourceAllocation = () => {
                 key={i}
                 item={item}
                 isLast={i === bottomItems.length - 1}
-                className="md:pb-0"
+                className=""
               />
             ))}
           </div>
@@ -160,8 +144,16 @@ export const ResourceAllocation = () => {
   );
 };
 
+type ResourceItem = {
+  title: string;
+  description: string;
+  images: { src: string; alt: string; width: number; height: number; imageClassName?: string }[];
+  className: string;
+  fade: string[];
+};
+
 interface ItemProps {
-  item: (typeof topItems)[number] | (typeof bottomItems)[number];
+  item: ResourceItem;
   isLast?: boolean;
   className?: string;
 }
@@ -170,7 +162,7 @@ const Item = ({ item, isLast, className }: ItemProps) => {
   return (
     <div
       className={cn(
-        "relative flex flex-col justify-between px-0 py-6 md:px-6 md:py-8",
+        "relative flex flex-col gap-5 overflow-hidden px-0 py-6 md:px-6 md:py-8",
         className,
         item.className,
       )}
@@ -233,7 +225,7 @@ const Item = ({ item, isLast, className }: ItemProps) => {
               alt={image.alt}
               width={image.width}
               height={image.height}
-              className="object-contain object-left-top"
+              className={cn("rounded-lg border object-contain object-left-top", image.imageClassName ?? "max-h-64 w-auto")}
             />
           ))}
         </div>

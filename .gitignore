@@ -42,3 +42,7 @@ next-env.d.ts
 .qodo
 _hero_raw.png
 _convert.py
+
+# Screenshot script temp files
+scripts/_*.png
+scripts/_*.py

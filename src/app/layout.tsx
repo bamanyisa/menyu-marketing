@@ -58,7 +58,7 @@ const dmSans = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: "Menyu — Digital Menus and QR Codes for Restaurants",
+    default: "Menyu | Digital Menus and QR Codes for Restaurants",
     template: "%s | Menyu",
   },
   description:
@@ -91,7 +91,7 @@ export const metadata: Metadata = {
     shortcut: [{ url: "/favicon/favicon.ico" }],
   },
   openGraph: {
-    title: "Menyu — Digital Menus and QR Codes for Restaurants",
+    title: "Menyu | Digital Menus and QR Codes for Restaurants",
     description:
       "Create a beautiful digital menu and QR code for your restaurant in minutes.",
     siteName: "Menyu",
@@ -106,7 +106,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Menyu — Digital Menus and QR Codes for Restaurants",
+    title: "Menyu | Digital Menus and QR Codes for Restaurants",
     description:
       "Create a beautiful digital menu and QR code for your restaurant in minutes.",
     images: ["/og-image.jpg"],
