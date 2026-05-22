@@ -4,7 +4,7 @@ import { Background } from "@/components/background";
 import { FAQ } from "@/components/blocks/faq";
 
 export const metadata: Metadata = {
-  title: "FAQ — Menyu",
+  title: "FAQ | Menyu",
   description: "Answers to common questions about Menyu.",
 };
 

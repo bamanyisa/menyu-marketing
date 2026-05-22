@@ -10,7 +10,6 @@ export function Footer() {
     { name: "Contact", href: "/contact" },
   ];
 
-  const legal = [{ name: "Privacy Policy", href: "/privacy" }];
 
   return (
     <footer className="flex flex-col items-center gap-14 pt-28 lg:pt-32">
@@ -36,18 +35,6 @@ export function Footer() {
               <Link
                 href={item.href}
                 className="font-medium transition-opacity hover:opacity-75"
-              >
-                {item.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
-        <ul className="flex flex-wrap items-center justify-center gap-6">
-          {legal.map((item) => (
-            <li key={item.name}>
-              <Link
-                href={item.href}
-                className="text-muted-foreground text-sm transition-opacity hover:opacity-75"
               >
                 {item.name}
               </Link>
