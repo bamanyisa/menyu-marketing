@@ -19,8 +19,10 @@ const LADLE_URL = 'http://localhost:61001/?story=dashboard-menu--default&mode=pr
 const OUT_PNG   = path.join(ROOT, 'scripts', '_hero_raw.png')
 const OUT_WEBP  = path.join(ROOT, 'public', 'hero.webp')
 
-const VIEWPORT_WIDTH  = 1600
-const VIEWPORT_HEIGHT = 900
+// Viewport matches what you see in the Ladle preview —
+// sidebar bottom (user profile) is visible at this height.
+const VIEWPORT_WIDTH  = 1440
+const VIEWPORT_HEIGHT = 820
 const DPR = 4  // device pixel ratio — 4x = ultra-sharp
 
 console.log(`📸  Capturing DashboardMenu story at ${DPR}x DPR…`)
@@ -47,7 +49,9 @@ await page.evaluate(() =>
 // Extra settle time for transitions
 await page.waitForTimeout(500)
 
-const buf = await page.screenshot({ fullPage: true })
+// Viewport-only — captures exactly what's visible, including the
+// sidebar user profile pinned to the bottom.
+const buf = await page.screenshot()
 await browser.close()
 
 writeFileSync(OUT_PNG, buf)

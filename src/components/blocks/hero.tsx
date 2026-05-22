@@ -84,12 +84,12 @@ export const Hero = () => {
       </div>
 
       <div className="mt-12 overflow-hidden max-lg:ml-6 md:mt-20 lg:container lg:mt-24">
-        <div className="relative w-full" style={{ aspectRatio: "1905 / 1314" }}>
+        <div className="relative w-full overflow-hidden rounded-2xl shadow-lg" style={{ aspectRatio: '1440 / 820' }}>
           <Image
             src="/hero.webp"
             alt="Menyu dashboard — manage your restaurant menu"
             fill
-            className="rounded-2xl object-cover object-left-top shadow-lg max-lg:rounded-tr-none"
+            className="object-cover object-left-top max-lg:rounded-tr-none"
             priority
           />
         </div>
