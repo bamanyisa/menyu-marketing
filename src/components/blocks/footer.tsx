@@ -55,8 +55,20 @@ export function Footer() {
         </ul>
       </nav>
 
-      <div className="text-muted-foreground/30 mt-6 w-full pb-8 text-center text-sm">
-        <p>Menyu &copy; {new Date().getFullYear()}. All rights reserved.</p>
+      <div className="text-primary mt-10 w-full md:mt-14 lg:mt-20">
+        <p
+          className="w-full text-center font-bold leading-none tracking-tighter"
+          style={{
+            fontSize: "clamp(4rem, 18vw, 18rem)",
+            background: "linear-gradient(to bottom, currentColor 0%, transparent 100%)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            backgroundClip: "text",
+            opacity: 0.2,
+          }}
+        >
+          menyu
+        </p>
       </div>
     </footer>
   );
