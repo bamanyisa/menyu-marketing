@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -29,6 +30,7 @@ export const Navbar = () => {
     >
       <div className="flex items-center justify-between px-6 py-3">
         <Link href="/" className="flex shrink-0 items-center gap-2">
+          <Image src="/favicon/favicon.svg" alt="Menyu logo" width={24} height={24} />
           <span className="text-xl font-bold tracking-tight">menyu</span>
         </Link>
 
@@ -88,7 +90,7 @@ export const Navbar = () => {
             <Link
               key={link.label}
               href={link.href}
-              className="text-primary hover:text-primary/80 py-4 text-base font-medium transition-colors first:pt-0 last:pb-0"
+              className="text-foreground hover:text-foreground/70 py-4 text-base font-medium transition-colors first:pt-0 last:pb-0"
               onClick={() => setIsMenuOpen(false)}
             >
               {link.label}

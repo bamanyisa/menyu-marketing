@@ -19,7 +19,7 @@ const topItems = [
       },
     ],
     className:
-      "flex-1 [&>.title-container]:mb-5 md:[&>.title-container]:mb-8 xl:[&>.image-container]:translate-x-6 [&>.image-container]:translate-x-2",
+      "flex-1 [&>.title-container]:mb-5 md:[&>.title-container]:mb-8 xl:[&>.image-container]:translate-x-6 md:[&>.image-container]:translate-x-2",
     fade: [""],
   },
   {
@@ -56,7 +56,7 @@ const bottomItems = [
       },
     ],
     className:
-      "[&>.title-container]:mb-5 md:[&>.title-container]:mb-8 xl:[&>.image-container]:translate-x-6 [&>.image-container]:translate-x-2",
+      "[&>.title-container]:mb-5 md:[&>.title-container]:mb-8 xl:[&>.image-container]:translate-x-6 md:[&>.image-container]:translate-x-2",
     fade: ["bottom"],
   },
   {
@@ -73,7 +73,7 @@ const bottomItems = [
       },
     ],
     className:
-      "[&>.title-container]:mb-5 md:[&>.title-container]:mb-8 xl:[&>.image-container]:translate-x-6 [&>.image-container]:translate-x-2",
+      "[&>.title-container]:mb-5 md:[&>.title-container]:mb-8 xl:[&>.image-container]:translate-x-6 md:[&>.image-container]:translate-x-2",
     fade: ["bottom"],
   },
   {
@@ -90,7 +90,7 @@ const bottomItems = [
       },
     ],
     className:
-      "[&>.title-container]:mb-5 md:[&>.title-container]:mb-8 xl:[&>.image-container]:translate-x-6 [&>.image-container]:translate-x-2",
+      "[&>.title-container]:mb-5 md:[&>.title-container]:mb-8 xl:[&>.image-container]:translate-x-6 md:[&>.image-container]:translate-x-2",
     fade: ["bottom"],
   },
 ];
@@ -225,7 +225,7 @@ const Item = ({ item, isLast, className }: ItemProps) => {
               alt={image.alt}
               width={image.width}
               height={image.height}
-              className={cn("rounded-lg border object-contain object-left-top", image.imageClassName ?? "max-h-64 w-auto")}
+              className={cn("mx-auto rounded-lg border object-contain object-top", image.imageClassName ?? "max-h-64 w-auto")}
             />
           ))}
         </div>

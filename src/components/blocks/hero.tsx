@@ -80,7 +80,7 @@ export const Hero = () => {
         </div>
       </div>
 
-      <div className="mt-12 overflow-hidden max-lg:ml-6 md:mt-20 lg:container lg:mt-24">
+      <div className="container mt-12 overflow-hidden md:mt-20 lg:mt-24">
         <div className="relative w-full overflow-hidden rounded-lg border" style={{ aspectRatio: '16 / 9' }}>
           <Image
             src="/hero.webp"
