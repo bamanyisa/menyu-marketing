@@ -22,8 +22,9 @@ const features = [
     icon: QrCode,
   },
   {
-    title: "Works on every phone",
-    description: "Mobile-friendly by default. No app download needed.",
+    title: "Beautiful on every phone",
+    description:
+      "Your menu loads fast and feels great on every customer's device - no app download needed.",
     icon: Smartphone,
   },
 ];
@@ -34,15 +35,15 @@ export const Hero = () => {
       <div className="container flex flex-col justify-between gap-8 md:gap-14 lg:flex-row lg:gap-20">
         <div className="flex-1">
           <p className="text-muted-foreground mb-4 text-sm font-medium uppercase tracking-widest">
-            Built for restaurants
+            The Menu Link for Restaurants
           </p>
           <h1 className="text-foreground max-w-160 text-3xl tracking-tight md:text-4xl lg:text-5xl">
-            Create a beautiful digital menu and QR code in minutes.
+            Put your restaurant menu in your bio.
           </h1>
 
           <p className="text-muted-foreground mt-5 text-xl md:text-2xl">
-            Import a menu photo or PDF, review the extracted items, and share a
-            mobile-friendly menu page your customers can scan.
+            Create a beautiful menu page for Instagram, TikTok, WhatsApp,
+            Google Maps, and QR codes - from a photo or PDF in minutes.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -84,7 +85,7 @@ export const Hero = () => {
         <div className="relative w-full overflow-hidden rounded-lg border" style={{ aspectRatio: '16 / 9' }}>
           <Image
             src="/hero.webp"
-            alt="Menyu dashboard — manage your restaurant menu"
+            alt="Menyu dashboard - manage your restaurant menu"
             fill
             className="object-cover object-top"
             priority

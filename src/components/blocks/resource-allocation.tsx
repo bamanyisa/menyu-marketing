@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 
 const topItems = [
   {
-    title: "A beautiful menu page your customers will love.",
+    title: "A menu page that feels as good as your restaurant.",
     description:
       "Every restaurant gets a mobile-friendly menu page with their brand colours, logo, and social links.",
     images: [
@@ -23,8 +23,9 @@ const topItems = [
     fade: [""],
   },
   {
-    title: "Share everywhere your customers are.",
-    description: "Link your Instagram, TikTok, WhatsApp and more — right on your menu page.",
+    title: "Put your menu where customers already click.",
+    description:
+      "Add your menu link to Instagram, TikTok, WhatsApp, Google Maps, and QR codes with one beautiful page.",
     images: [
       { src: "/logos/instagram-icon.svg", alt: "Instagram", width: 48, height: 48 },
       { src: "/logos/tiktok-icon.svg", alt: "TikTok", width: 48, height: 48 },
@@ -43,9 +44,9 @@ const topItems = [
 
 const bottomItems = [
   {
-    title: "QR code, ready to print.",
+    title: "QR codes ready to print.",
     description:
-      "Every menu comes with a scannable QR code. Print it, frame it, stick it — customers scan and see your menu instantly.",
+      "Print it, frame it, or stick it on tables - customers scan and see your menu instantly.",
     images: [
       {
         src: "/resource-allocation/qr.webp",
@@ -60,7 +61,7 @@ const bottomItems = [
     fade: ["bottom"],
   },
   {
-    title: "Beautiful item cards, automatically.",
+    title: "Beautiful dish pages, automatically.",
     description:
       "Food photos, descriptions, and prices — all laid out for you.",
     images: [
@@ -103,7 +104,7 @@ export const ResourceAllocation = () => {
     >
       <div className="">
         <h2 className="container text-center text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-6xl">
-          Everything you need to run your menu
+          Your restaurant menu, everywhere customers discover you
         </h2>
 
         <div className="mt-8 md:mt-12 lg:mt-20">
