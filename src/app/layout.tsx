@@ -66,6 +66,11 @@ export const metadata: Metadata = {
   description:
     "Put your restaurant menu where customers already look. Create a mobile-friendly menu page for Instagram, TikTok, WhatsApp, Google Maps, and QR codes from a photo or PDF in minutes.",
   keywords: [
+    "digital menu for restaurants",
+    "QR menu for restaurants",
+    "restaurant menu link",
+    "menu in bio for restaurants",
+    "online menu from PDF",
     "menu link",
     "menu in bio",
     "digital menu",
