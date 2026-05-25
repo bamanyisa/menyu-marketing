@@ -58,19 +58,22 @@ const dmSans = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: "Menyu | Digital Menus and QR Codes for Restaurants",
+    default: "Menyu | Menu Links and QR Codes for Restaurants",
     template: "%s | Menyu",
   },
   description:
-    "Create a beautiful digital menu and QR code for your restaurant in minutes. Import a photo or PDF, review the items, and share a mobile-friendly menu page.",
+    "Put your restaurant menu where customers already look. Create a mobile-friendly menu page for Instagram, TikTok, WhatsApp, Google Maps, and QR codes from a photo or PDF in minutes.",
   keywords: [
+    "menu link",
+    "menu in bio",
     "digital menu",
     "restaurant menu",
+    "mobile menu",
     "QR code menu",
     "restaurant qr code",
     "online menu",
-    "menu maker",
-    "restaurant software",
+    "instagram menu link",
+    "tiktok menu",
   ],
   authors: [{ name: "Menyu" }],
   creator: "Menyu",
@@ -91,9 +94,9 @@ export const metadata: Metadata = {
     shortcut: [{ url: "/favicon/favicon.ico" }],
   },
   openGraph: {
-    title: "Menyu | Digital Menus and QR Codes for Restaurants",
+    title: "Menyu | Menu Links and QR Codes for Restaurants",
     description:
-      "Create a beautiful digital menu and QR code for your restaurant in minutes.",
+      "Create a mobile-friendly menu page for Instagram, TikTok, WhatsApp, Google Maps, and QR codes from a photo or PDF in minutes.",
     siteName: "Menyu",
     images: [
       {
@@ -106,9 +109,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Menyu | Digital Menus and QR Codes for Restaurants",
+    title: "Menyu | Menu Links and QR Codes for Restaurants",
     description:
-      "Create a beautiful digital menu and QR code for your restaurant in minutes.",
+      "Create a mobile-friendly menu page for Instagram, TikTok, WhatsApp, Google Maps, and QR codes from a photo or PDF in minutes.",
     images: ["/og-image.jpg"],
   },
 };
