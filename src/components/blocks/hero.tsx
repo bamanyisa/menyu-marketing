@@ -85,7 +85,7 @@ export const Hero = () => {
         <div className="relative w-full overflow-hidden rounded-lg border" style={{ aspectRatio: '16 / 9' }}>
           <Image
             src="/hero.webp"
-            alt="Menyu dashboard - manage your restaurant menu"
+            alt="Menyu - a beautiful public menu page on any device"
             fill
             className="object-cover object-top"
             priority

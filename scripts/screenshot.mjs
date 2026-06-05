@@ -1,8 +1,6 @@
 /**
- * Capture a crisp 4x DPR screenshot of the DashboardMenu Ladle story
- * and save it as public/hero.webp.
- *
- * Prerequisites: Ladle must be running (npm run ladle --port 61001)
+ * Capture a 16:9 hero screenshot of the PublicMenu Ladle story.
+ * Prerequisites: npm run ladle (starts on port 61001)
  * Usage: node scripts/screenshot.mjs
  */
 
@@ -17,16 +15,15 @@ const ROOT = path.resolve(__dirname, '..')
 
 // Default story at a wide viewport — the extra width naturally makes
 // the UI feel zoomed out without any artificial wrapper.
-const LADLE_URL = 'http://localhost:61001/?story=dashboard-menu--default&mode=preview'
+const LADLE_URL = 'http://localhost:61001/?story=public-menu--default&mode=preview'
 const OUT_PNG   = path.join(ROOT, 'scripts', '_hero_raw.png')
 const OUT_WEBP  = path.join(ROOT, 'public', 'hero.webp')
 
-// Narrower viewport so dashboard elements fill the frame at readable size.
 const VIEWPORT_WIDTH  = 1440
 const VIEWPORT_HEIGHT = 810
-const DPR = 2  // 2x = retina sharp without over-shrinking UI elements
+const DPR = 4
 
-console.log(`📸  Capturing DashboardMenu story at ${VIEWPORT_WIDTH}×${VIEWPORT_HEIGHT} ${DPR}x DPR…`)
+console.log(`📸  Capturing PublicMenu story at ${VIEWPORT_WIDTH}×${VIEWPORT_HEIGHT} ${DPR}x DPR…`)
 
 const browser = await chromium.launch()
 const page = await browser.newPage({
@@ -47,11 +44,8 @@ await page.evaluate(() =>
   )
 )
 
-// Extra settle time for transitions
-await page.waitForTimeout(500)
+await page.waitForTimeout(800)
 
-// Viewport-only — captures exactly what's visible, including the
-// sidebar user profile pinned to the bottom.
 const buf = await page.screenshot()
 await browser.close()
 
@@ -66,7 +60,7 @@ writeFileSync(pyScript,
 try {
   const result = execSync(`python3 "${pyScript}"`, { encoding: 'utf8' })
   console.log(`✅  ${result.trim()}`)
-  console.log(`📁  public/hero.webp updated — rebuild or copy to out/`)
+  console.log(`📁  public/hero.webp updated`)
 } catch (e) {
   console.error('WebP conversion failed — PNG is at', OUT_PNG)
   console.error(e.message)
