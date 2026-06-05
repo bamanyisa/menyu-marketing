@@ -3,6 +3,7 @@
 import { useState } from "react";
 
 import { Globe, MapPin, ImagePlus, Share2, Check } from "lucide-react";
+import { QRCodeSVG } from "qrcode.react";
 import {
   FaFacebookF,
   FaInstagram,
@@ -84,7 +85,7 @@ const socialLabelByKey: Record<string, string> = {
 };
 
 export default function MenuPage({ data }: { data: MenuData }) {
-  const { restaurant, categories, social_links, show_cta, growth_cta_text, register_url } = data;
+  const { restaurant, categories, social_links, show_cta, growth_cta_text, register_url, menu_url } = data;
   const brandColor = restaurant.brand_color ?? "#cc3500";
   const currencyCode = restaurant.currency_code;
 
@@ -246,9 +247,20 @@ export default function MenuPage({ data }: { data: MenuData }) {
             </div>
           ))}
 
-          {/* Branding CTA */}
-          {show_cta && (
-            <div className="rounded-lg bg-white shadow-sm overflow-hidden">
+          {/* QR code + branding CTA */}
+          <div className="rounded-lg bg-white shadow-sm overflow-hidden">
+            <div className="flex flex-col items-center gap-3 px-5 py-5">
+              <div className="rounded-lg bg-gray-50 p-3">
+                <QRCodeSVG value={menu_url} size={150} />
+              </div>
+              <div className="text-center">
+                <p className="font-semibold text-gray-900">Scan &amp; Share</p>
+                <p className="mt-0.5 text-sm text-gray-500">
+                  Scan this code to open the menu on any device.
+                </p>
+              </div>
+            </div>
+            {show_cta && (
               <div className="border-t border-gray-100 px-5 py-3 flex justify-center">
                 <a
                   href={register_url}
@@ -257,8 +269,8 @@ export default function MenuPage({ data }: { data: MenuData }) {
                   {growth_cta_text}
                 </a>
               </div>
-            </div>
-          )}
+            )}
+          </div>
 
         </main>
       </div>
