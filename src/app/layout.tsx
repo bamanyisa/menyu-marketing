@@ -1,11 +1,4 @@
 import localFont from "next/font/local";
-
-import type { Metadata } from "next";
-
-import { Footer } from "@/components/blocks/footer";
-import { Navbar } from "@/components/blocks/navbar";
-import { StyleGlideProvider } from "@/components/styleglide-provider";
-import { ThemeProvider } from "@/components/theme-provider";
 import "@/styles/globals.css";
 
 const dmSans = localFont({
@@ -55,72 +48,6 @@ const dmSans = localFont({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://mymenyu.com";
-
-export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
-  title: {
-    default: "Menyu | Menu Links and QR Codes for Restaurants",
-    template: "%s | Menyu",
-  },
-  description:
-    "Put your restaurant menu where customers already look. Create a mobile-friendly menu page for Instagram, TikTok, WhatsApp, Google Maps, and QR codes from a photo or PDF in minutes.",
-  keywords: [
-    "digital menu for restaurants",
-    "QR menu for restaurants",
-    "restaurant menu link",
-    "menu in bio for restaurants",
-    "online menu from PDF",
-    "menu link",
-    "menu in bio",
-    "digital menu",
-    "restaurant menu",
-    "mobile menu",
-    "QR code menu",
-    "restaurant qr code",
-    "online menu",
-    "instagram menu link",
-    "tiktok menu",
-  ],
-  authors: [{ name: "Menyu" }],
-  creator: "Menyu",
-  publisher: "Menyu",
-  robots: {
-    index: true,
-    follow: true,
-  },
-  icons: {
-    icon: [
-      { url: "/favicon/favicon.ico", sizes: "48x48" },
-      { url: "/favicon/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon/favicon-96x96.png", sizes: "96x96", type: "image/png" },
-    ],
-    apple: [{ url: "/favicon/apple-touch-icon.png", sizes: "180x180" }],
-    shortcut: [{ url: "/favicon/favicon.ico" }],
-  },
-  openGraph: {
-    title: "Menyu | Menu Links and QR Codes for Restaurants",
-    description:
-      "Create a mobile-friendly menu page for Instagram, TikTok, WhatsApp, Google Maps, and QR codes from a photo or PDF in minutes.",
-    siteName: "Menyu",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Menyu — Digital menu dashboard",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Menyu | Menu Links and QR Codes for Restaurants",
-    description:
-      "Create a mobile-friendly menu page for Instagram, TikTok, WhatsApp, Google Maps, and QR codes from a photo or PDF in minutes.",
-    images: ["/og-image.jpg"],
-  },
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -129,19 +56,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
-      <body className={`${dmSans.variable} antialiased`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="light"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <StyleGlideProvider />
-          <Navbar />
-          <main className="">{children}</main>
-          <Footer />
-        </ThemeProvider>
-      </body>
+      <body className={`${dmSans.variable} antialiased`}>{children}</body>
     </html>
   );
 }
