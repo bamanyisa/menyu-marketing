@@ -103,8 +103,8 @@ export const ResourceAllocation = () => {
       className="overflow-hidden pb-28 lg:pb-32"
     >
       <div className="">
-        <h2 className="container text-center text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-6xl">
-          Your restaurant menu, everywhere customers discover you
+        <h2 className="container text-center text-2xl tracking-tight text-balance sm:text-3xl md:text-4xl lg:text-5xl">
+          Everywhere customers find you
         </h2>
 
         <div className="mt-8 md:mt-12 lg:mt-20">
