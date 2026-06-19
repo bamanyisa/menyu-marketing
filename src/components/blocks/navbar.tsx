@@ -53,7 +53,7 @@ export const Navbar = () => {
           <ThemeToggle />
           <a
             href="https://app.mymenyu.com/login"
-            className="text-muted-foreground hover:text-foreground max-lg:hidden text-sm font-medium transition-colors"
+            className="relative bg-transparent px-3 py-1.5 text-sm font-medium transition-opacity hover:opacity-75 max-lg:hidden"
           >
             Login
           </a>
