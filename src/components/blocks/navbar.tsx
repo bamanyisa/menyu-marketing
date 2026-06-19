@@ -51,6 +51,12 @@ export const Navbar = () => {
 
         <div className="flex items-center gap-2.5">
           <ThemeToggle />
+          <a
+            href="https://app.mymenyu.com/login"
+            className="text-muted-foreground hover:text-foreground max-lg:hidden text-sm font-medium transition-colors"
+          >
+            Log in
+          </a>
           <Button asChild className="max-lg:hidden">
             <a href="https://app.mymenyu.com/register">Create Free Menu</a>
           </Button>
@@ -96,9 +102,12 @@ export const Navbar = () => {
               {link.label}
             </Link>
           ))}
-          <div className="pt-4">
+          <div className="flex flex-col gap-2 pt-4">
             <Button asChild className="w-full">
               <a href="https://app.mymenyu.com/register">Create Free Menu</a>
+            </Button>
+            <Button asChild variant="outline" className="w-full">
+              <a href="https://app.mymenyu.com/login">Log in</a>
             </Button>
           </div>
         </nav>
