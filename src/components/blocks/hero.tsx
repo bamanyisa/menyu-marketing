@@ -46,7 +46,7 @@ export const Hero = () => {
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <Button asChild size="lg">
-              <a href="#">Create Free Menu</a>
+              <a href="https://app.mymenyu.com/register">Create Free Menu</a>
             </Button>
           </div>
         </div>

@@ -19,6 +19,7 @@ const plans = [
       "Custom brand colors",
     ],
     cta: "Create Free Menu",
+    ctaHref: "https://app.mymenyu.com/register",
     highlight: false,
   },
   {
@@ -35,6 +36,7 @@ const plans = [
       "No Menyu branding",
     ],
     cta: "Upgrade to Pro",
+    ctaHref: "https://app.mymenyu.com/register",
     highlight: true,
   },
 ];
@@ -88,7 +90,7 @@ export const Pricing = ({ className }: { className?: string }) => {
                   variant={plan.highlight ? "default" : "outline"}
                   asChild
                 >
-                  <a href="#">{plan.cta}</a>
+                  <a href={plan.ctaHref}>{plan.cta}</a>
                 </Button>
               </CardContent>
             </Card>

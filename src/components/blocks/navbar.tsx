@@ -52,7 +52,7 @@ export const Navbar = () => {
         <div className="flex items-center gap-2.5">
           <ThemeToggle />
           <Button asChild className="max-lg:hidden">
-            <a href="#">Create Free Menu</a>
+            <a href="https://app.mymenyu.com/register">Create Free Menu</a>
           </Button>
           <button
             className="text-muted-foreground relative flex size-8 lg:hidden"
@@ -98,7 +98,7 @@ export const Navbar = () => {
           ))}
           <div className="pt-4">
             <Button asChild className="w-full">
-              <a href="#">Create Free Menu</a>
+              <a href="https://app.mymenyu.com/register">Create Free Menu</a>
             </Button>
           </div>
         </nav>

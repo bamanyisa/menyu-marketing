@@ -23,7 +23,7 @@ export function Footer() {
         </p>
         <div>
           <Button size="lg" className="mt-4" asChild>
-            <a href="#">Create Free Menu</a>
+            <a href="https://app.mymenyu.com/register">Create Free Menu</a>
           </Button>
         </div>
       </div>
