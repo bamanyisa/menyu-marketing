@@ -55,7 +55,7 @@ export const Navbar = () => {
             href="https://app.mymenyu.com/login"
             className="text-muted-foreground hover:text-foreground max-lg:hidden text-sm font-medium transition-colors"
           >
-            Log in
+            Login
           </a>
           <Button asChild className="max-lg:hidden">
             <a href="https://app.mymenyu.com/register">Create Free Menu</a>
@@ -107,7 +107,7 @@ export const Navbar = () => {
               <a href="https://app.mymenyu.com/register">Create Free Menu</a>
             </Button>
             <Button asChild variant="outline" className="w-full">
-              <a href="https://app.mymenyu.com/login">Log in</a>
+              <a href="https://app.mymenyu.com/login">Login</a>
             </Button>
           </div>
         </nav>
